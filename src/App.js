@@ -6,7 +6,7 @@ import DisplayCards from './component/displayCard'
 
 function App() {
   return (
-    <section className="section bg-light ht-100">
+    <section className="section bg-light">
       <div class="container">
         <div className='row'>
           <div className='col title-row'>
