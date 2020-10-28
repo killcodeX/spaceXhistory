@@ -4,6 +4,7 @@ import getDataApi from '../api/getData';
 import getlaunchSuccessApi from '../api/launchesSuccess';
 import LaunchYearDataApi from '../api/launchYear';
 import getlandSuccessApi from '../api/landSuccess';
+import getfilterApi from '../api/allFIlterData';
 
 
 
@@ -17,6 +18,8 @@ export default function DataProvider(props) {
     const [landSuccessful, setLandSuccessful] = useState(null)
 
     useEffect(() => {
+
+        // to get all data
         const getData = async () => {
             const data = await getDataApi();
             if(data){
@@ -26,7 +29,8 @@ export default function DataProvider(props) {
             }
             
         }
-        
+
+        // Data filter by year  
         const getLaunchYear = async () => {
             //console.log(launchYear)
             const data = await LaunchYearDataApi(launchYear);
@@ -36,6 +40,8 @@ export default function DataProvider(props) {
             
         }
 
+
+        // Data filter by Launch
         const getlaunchSuccessfull = async () => {
             //console.log(launchYear)
             const data = await getlaunchSuccessApi(launchSuccessful);
@@ -44,6 +50,8 @@ export default function DataProvider(props) {
             }
             
         }
+
+        // Data filter by Land
         const getlandSuccessfull = async () => {
             //console.log(launchYear)
             const data = await getlandSuccessApi(landSuccessful);
@@ -53,6 +61,24 @@ export default function DataProvider(props) {
             
         }
 
+        // Data filter by everything
+        const getAllFilterData = async () => {
+            let params = {
+                launch: launchSuccessful,
+                land : landSuccessful,
+                year : launchYear
+            }
+            const data = await getlandSuccessApi(params);
+            if(data){
+                setSpaceshipHistory(data)
+            }
+            
+        }
+
+        if(launchSuccessful && landSuccessful && launchYear){
+            console.log('got all data')
+        }
+        getAllFilterData()
         getlandSuccessfull()
         getlaunchSuccessfull()
         getLaunchYear()
