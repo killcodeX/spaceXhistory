@@ -1,12 +1,17 @@
 import React, { useState, useContext, useEffect } from "react";
-import getDataApi from '../api/getData';
 import FakeData from './fakedata.json';
+import getDataApi from '../api/getData';
+import getlaunchSuccessApi from '../api/launchesSuccess';
+import LaunchYearDataApi from '../api/launchYear';
+
+
 
 export const DataContext = React.createContext();
 
 export default function DataProvider(props) {
 
     const [spaceshipHistory, setSpaceshipHistory] = useState('');
+    const [launchYear, setLaunchYear] = useState(null);
 
     useEffect(() => {
         const getData = async () => {
@@ -18,15 +23,34 @@ export default function DataProvider(props) {
             }
             
         }
+        
+        const getLaunchYear = async () => {
+            //console.log(launchYear)
+            const data = await LaunchYearDataApi(launchYear);
+            if(data){
+                setSpaceshipHistory(data)
+            }
+            
+        }
+
+        getLaunchYear()
+
 
         getData()
-    }, [])
+    }, [launchYear])
+
+
+    const getLnchYear = (data) => {
+        //console.log(data)
+        setLaunchYear(data)
+    }
 
 
   return (
     <DataContext.Provider
       value={{
-        spaceshipHistory
+        spaceshipHistory,
+        getLnchYear
       }}
     >
       <>{props.children}</>

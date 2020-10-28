@@ -20,14 +20,12 @@ const years = [
 
 export default function DisplayCard() {
   const { spaceshipHistory } = useContext(DataContext);
-
-  console.log(spaceshipHistory);
+ 
   return (
     <>
       <div className="row">
         {spaceshipHistory ? (
           spaceshipHistory.map((data, index) => {
-            console.log(data.rocket.first_stage.cores[0].land_success)
             return (
               <div className="col-md-4 p-2" key={index}>
                 <div className="card">
@@ -64,8 +62,8 @@ export default function DisplayCard() {
             );
           })
         ) : (
-          <div class="spinner-border spin" role="status">
-            <span class="sr-only">Loading...</span>
+          <div className="spinner-border spin" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         )}
       </div>

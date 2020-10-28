@@ -1,4 +1,5 @@
 import React from "react";
+import { DataContext } from "../context/context";
 
 const years = [
   2006,
@@ -19,6 +20,9 @@ const years = [
 ];
 
 export default function Filter() {
+
+  const { getLnchYear } = React.useContext(DataContext);
+
   return (
     <>
       <h3 className="filter-title mt-1 mb-3">Filters</h3>
@@ -31,7 +35,7 @@ export default function Filter() {
         {years.map((data, index) => {
           return (
             <div className="col  brdr" key={index}>
-              <button className="btn-year mb-2">{data}</button>
+              <button className="btn-year mb-2" onClick={() => getLnchYear(data)}>{data}</button>
             </div>
           );
         })}
