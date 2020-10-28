@@ -21,7 +21,7 @@ const years = [
 
 export default function Filter() {
 
-  const { getLnchYear } = React.useContext(DataContext);
+  const { getLnchYear, getLnchSuccessfull, getLndSuccessfull } = React.useContext(DataContext);
 
   return (
     <>
@@ -47,10 +47,10 @@ export default function Filter() {
       </div>
       <div className="row mt-4">
           <div className="col brdr">
-            <button className="btn-year mb-2">True</button>
+            <button className="btn-year mb-2" onClick={() => getLnchSuccessfull(true)}>True</button>
           </div>
           <div className="col">
-            <button className="btn-year mb-2">False</button>
+            <button className="btn-year mb-2" onClick={() => getLnchSuccessfull(false)}>False</button>
           </div>
       </div>
       <div className="row mt-4">
@@ -60,10 +60,10 @@ export default function Filter() {
       </div>
       <div className="row mt-4">
           <div className="col brdr">
-            <button className="btn-year mb-2">True</button>
+            <button className="btn-year mb-2" onClick={() => getLndSuccessfull(true)}>True</button>
           </div>
           <div className="col">
-            <button className="btn-year mb-2">False</button>
+            <button className="btn-year mb-2" onClick={() => getLndSuccessfull(false)}>False</button>
           </div>
       </div>
     </>
