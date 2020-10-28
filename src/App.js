@@ -1,12 +1,24 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Filter from './component/filter';
+import DisplayCards from './component/displayCard'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <section className="section bg-light ht-100">
+      <div class="container">
+        <div className='row'>
+          <div className='col title-row'>
+            <h2 className='section_title'>SpaceX Launch Programs</h2>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-xl-3 col-lg-3 mt-4 content-left pb-4'><Filter/></div>
+          <div className='col-xl-3 col-lg-3 mt-4'><DisplayCards/></div>
+        </div>
+      </div>
+    </section>
   );
 }
 

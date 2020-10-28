@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.title-row {
+  padding: 15px 0px;
+  border-bottom: 3px solid #f0f3fc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section_title {
+  font-size: 1.625rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-family: "Lobster", cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ht-100 {
+  min-height: fit-content;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-left {
+  background: white;
+  border-radius: 10px;
+}
+
+/* ---------------------------------------- for filter ----------------------------------------------------- */
+
+.filter-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.filter-subtitle {
+  font-size: 18px;
+}
+
+.filter-subtitle:after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  width: 219px;
+  height: 3px;
+  background: #f0f3fc;
+}
+
+.brdr {
+  /* border-bottom: 2px solid #F0F3FC; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-year{
+  border: none;
+    color: #fff;
+    background: #11BF8B;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 12px 20px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    width:80px;
 }
