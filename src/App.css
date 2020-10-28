@@ -16,10 +16,13 @@
   min-height: fit-content;
 }
 
-.content-left {
+.content-left, .content-right {
   background: white;
   border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
 }
+
+
 
 /* ---------------------------------------- for filter ----------------------------------------------------- */
 
@@ -50,7 +53,7 @@
 
 
 .btn-year{
-  border: none;
+    border: none;
     color: #fff;
     background: #11BF8B;
     outline: none;
@@ -73,4 +76,23 @@
     font-size: 14px;
     font-size: 0.875rem;
     width:80px;
+}
+
+
+/* ---------------------------------------- for display Cards ----------------------------------------------------- */
+
+
+/* ---------------------------------------- Mobile RESPONSIVE ----------------------------------------------------- */
+
+
+@media(max-width:480px){
+  .title-row{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* for filter */
+  .filter-subtitle:after {
+    left: 74px;
+  }
 }

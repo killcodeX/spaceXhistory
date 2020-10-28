@@ -27,10 +27,10 @@ export default function Filter() {
           <h4 className="filter-subtitle">Lunch Year</h4>
         </div>
       </div>
-      <div className="row mt-4 mb-5 pl-4">
+      <div className="row mt-4 mb-5">
         {years.map((data, index) => {
           return (
-            <div className="col" key={index}>
+            <div className="col  brdr" key={index}>
               <button className="btn-year mb-2">{data}</button>
             </div>
           );
@@ -40,28 +40,29 @@ export default function Filter() {
         <div className="col brdr">
           <h4 className="filter-subtitle">Successful Launch</h4>
         </div>
-        <div className="row mt-4 pl-5">
-          <div className="col">
+      </div>
+      <div className="row mt-4">
+          <div className="col brdr">
             <button className="btn-year mb-2">True</button>
           </div>
           <div className="col">
             <button className="btn-year mb-2">False</button>
           </div>
-        </div>
       </div>
-      <div className="row mt-2">
+      <div className="row mt-4">
         <div className="col brdr">
           <h4 className="filter-subtitle">Successful Landing</h4>
         </div>
-        <div className="row mt-4 pl-5">
-          <div className="col">
+      </div>
+      <div className="row mt-4">
+          <div className="col brdr">
             <button className="btn-year mb-2">True</button>
           </div>
           <div className="col">
             <button className="btn-year mb-2">False</button>
           </div>
-        </div>
       </div>
     </>
   );
 }
+

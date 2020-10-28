@@ -14,8 +14,8 @@ function App() {
           </div>
         </div>
         <div className='row'>
-          <div className='col-xl-3 col-lg-3 mt-4 content-left pb-4'><Filter/></div>
-          <div className='col-xl-3 col-lg-3 mt-4'><DisplayCards/></div>
+          <div className='col-xl-3 col-lg-3 content-left mt-4 mr-2 pb-4'><Filter/></div>
+          <div className='col-xl-3 col-lg-3 content-right mt-4 ml-2 pb-4'><DisplayCards/></div>
         </div>
       </div>
     </section>
