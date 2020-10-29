@@ -29,7 +29,7 @@ http://localhost:3000
 You can also check the demo on [React Spaceship History](https://react-spacex-history.netlify.app)
 
 ## ScreenShots
-![alt text](http://url/to/img.png)
+![SpaceX](https://github.com/killcodeX/spaceXhistory/blob/master/public/spaceship.png)
 
 
 
