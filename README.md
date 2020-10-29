@@ -34,5 +34,5 @@ You can also check the demo on [React Spaceship History](https://react-spacex-hi
 ## LightHouse Report
 You can also check the Light House Report (Desktop) on [Report](https://github.com/killcodeX/spaceXhistory/blob/master/spaceX%20report.pdf)
 
-You can also check the Light House Report (Mobile) on [Report](https://github.com/killcodeX/spaceXhistory/blob/master/spaceX%20report.pdf)
+You can also check the Light House Report (Mobile) on [Report](https://github.com/killcodeX/spaceXhistory/blob/master/spaceX%20report%20Mobile.pdf)
 
