@@ -32,16 +32,22 @@ export default function Filter() {
   const handleClick = (data, id) => {
     getLnchYear(data)
     setSelect(id)
+    setBool(null)
+    setBool2(null)
   }
 
   const handleSecondClick = (data) => {
     getLnchSuccessfull(data)
     setBool(data)
+    setSelect(null)
+    setBool2(null)
   }
 
   const handlethirdClick = (data) => {
     getLndSuccessfull(data)
     setBool2(data)
+    setBool(null)
+    setSelect(null)
   }
 
   return (

@@ -179,7 +179,9 @@
     display: flex;
     justify-content: center;
   }
-
+  .colmn1 {
+    padding-left:50px !important;
+  }
   /* for filter */
   .filter-subtitle:after {
     left: 74px;
