@@ -149,6 +149,17 @@
 
 /* ---------------------------------------- Mobile RESPONSIVE ----------------------------------------------------- */
 
+
+@media(max-width:880px){
+  .colmn1 {
+    padding-left:10px;
+  }
+
+}
+
+
+
+
 @media(max-width:880px){
   .title-row{
     display: flex;
@@ -160,9 +171,9 @@
     left: 235px;
   }
 
-  .colmn {
+  /* .colmn {
     padding-left: 50px;
-  }
+  } */
 
   .colmn1 {
     padding-left:100px;
@@ -179,10 +190,15 @@
 }
 
 @media(max-width:480px){
-  .title-row{
+  /* .title-row{
     display: flex;
     justify-content: center;
+  } */
+
+  .colmn {
+    padding-left: 50px;
   }
+
   .colmn1 {
     padding-left:50px !important;
   }
