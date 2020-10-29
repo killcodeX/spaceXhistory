@@ -31,7 +31,6 @@ You can also check the demo on [React Spaceship History](https://react-spacex-hi
 ## ScreenShots
 ![SpaceX](https://github.com/killcodeX/spaceXhistory/blob/master/public/spaceship.png)
 
+## LightHouse Report
+You can also check the Light House Report on [Report](https://github.com/killcodeX/spaceXhistory/blob/master/spaceX%20report.pdf)
 
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
