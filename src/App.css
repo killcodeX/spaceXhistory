@@ -50,10 +50,15 @@
 }
 
 .brdr {
-  /* border-bottom: 2px solid #F0F3FC; */
   display: flex;
   justify-content: center;
 }
+
+.colmn {
+  padding-left:34px;
+}
+
+
 
 
 .btn-year{
@@ -79,7 +84,33 @@
     border-radius: 3px;
     font-size: 14px;
     font-size: 0.875rem;
-    width:80px;
+    width:75px;
+}
+
+.btn-year1{
+  border: none;
+  color: #fff;
+  background: #11BF8B80;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  width:75px;
 }
 
 
@@ -104,18 +135,44 @@
 
 .card{
   box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
-  min-height: 370px;
+  min-height: 387px;
 }
 
 .card-details{
   font-size: 14px;
 }
 
-
+.row{
+  margin-right: 0px !important;
+}
 
 
 /* ---------------------------------------- Mobile RESPONSIVE ----------------------------------------------------- */
 
+@media(max-width:880px){
+  .title-row{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* for filter */
+  .filter-subtitle:after {
+    left: 235px;
+  }
+
+  .colmn1 {
+    padding-left:100px;
+  }
+
+  .card {
+    min-height: 452px;
+  }
+  /* .card {
+    display:block;
+    margin:0 auto;
+    //width:330px;
+} */
+}
 
 @media(max-width:480px){
   .title-row{
@@ -127,4 +184,10 @@
   .filter-subtitle:after {
     left: 74px;
   }
+
+  .card {
+    display:block;
+    margin:0 auto;
+    width:330px;
+}
 }

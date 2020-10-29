@@ -27,7 +27,7 @@ export default function DisplayCard() {
         {spaceshipHistory ? (
           spaceshipHistory.map((data, index) => {
             return (
-              <div className="col-md-4 p-2" key={index}>
+              <div className="col-md-6 col-xl-3 p-2" key={index}>
                 <div className="card">
                   <div className="card-header brdr">
                     <img

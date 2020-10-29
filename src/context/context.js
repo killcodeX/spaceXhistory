@@ -68,6 +68,8 @@ export default function DataProvider(props) {
                 land : landSuccessful,
                 year : launchYear
             }
+
+            console.log(params)
             const data = await getlandSuccessApi(params);
             if(data){
                 setSpaceshipHistory(data)
@@ -75,9 +77,9 @@ export default function DataProvider(props) {
             
         }
 
-        if(launchSuccessful && landSuccessful && launchYear){
-            console.log('got all data')
-        }
+        // if(launchSuccessful && landSuccessful && launchYear){
+        //     console.log('got all data')
+        // }
         getAllFilterData()
         getlandSuccessfull()
         getlaunchSuccessfull()

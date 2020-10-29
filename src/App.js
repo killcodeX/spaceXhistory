@@ -17,7 +17,7 @@ function App() {
           <div className='col-xl-3 col-lg-3 mt-4 '>
             <div className='content-left p-2'><Filter/></div>
           </div>
-          <div className='col-xl-8 col-lg-8 mt-4 pb-4'><DisplayCards/></div>
+          <div className='col-xl-9 col-lg-9 mt-4'><DisplayCards/></div>
         </div>
       </div>
     </section>

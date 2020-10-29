@@ -16,12 +16,33 @@ const years = [
   2017,
   2018,
   2019,
-  2020,
+  2020
 ];
 
 export default function Filter() {
 
+  const[select, setSelect] = React.useState(null);
+
+  const[bool, setBool] = React.useState(null);
+
+  const[bool2, setBool2] = React.useState(null);
+
   const { getLnchYear, getLnchSuccessfull, getLndSuccessfull } = React.useContext(DataContext);
+
+  const handleClick = (data, id) => {
+    getLnchYear(data)
+    setSelect(id)
+  }
+
+  const handleSecondClick = (data) => {
+    getLnchSuccessfull(data)
+    setBool(data)
+  }
+
+  const handlethirdClick = (data) => {
+    getLndSuccessfull(data)
+    setBool2(data)
+  }
 
   return (
     <>
@@ -34,8 +55,8 @@ export default function Filter() {
       <div className="row mt-4 mb-5">
         {years.map((data, index) => {
           return (
-            <div className="col  brdr" key={index}>
-              <button className="btn-year mb-2" onClick={() => getLnchYear(data)}>{data}</button>
+            <div className="col colmn" key={index}>
+              <button className={select == index? 'btn-year mb-2': 'btn-year1 mb-2'} onClick={() => handleClick(data, index)}>{data}</button>
             </div>
           );
         })}
@@ -46,11 +67,11 @@ export default function Filter() {
         </div>
       </div>
       <div className="row mt-4">
-          <div className="col brdr">
-            <button className="btn-year mb-2" onClick={() => getLnchSuccessfull(true)}>True</button>
+          <div className="col brdr colmn1">
+            <button className={bool? 'btn-year mb-2': 'btn-year1 mb-2'} onClick={() => handleSecondClick(true)}>True</button>
           </div>
           <div className="col">
-            <button className="btn-year mb-2" onClick={() => getLnchSuccessfull(false)}>False</button>
+            <button className={bool == false? 'btn-year mb-2': 'btn-year1 mb-2'} onClick={() => handleSecondClick(false)}>False</button>
           </div>
       </div>
       <div className="row mt-4">
@@ -59,11 +80,11 @@ export default function Filter() {
         </div>
       </div>
       <div className="row mt-4">
-          <div className="col brdr">
-            <button className="btn-year mb-2" onClick={() => getLndSuccessfull(true)}>True</button>
+          <div className="col brdr colmn1">
+            <button className={bool2? 'btn-year mb-2': 'btn-year1 mb-2'} onClick={() => handlethirdClick(true)}>True</button>
           </div>
           <div className="col">
-            <button className="btn-year mb-2" onClick={() => getLndSuccessfull(false)}>False</button>
+            <button className={bool2 == false? 'btn-year mb-2': 'btn-year1 mb-2'} onClick={() => handlethirdClick(false)}>False</button>
           </div>
       </div>
     </>
