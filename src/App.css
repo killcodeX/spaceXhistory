@@ -160,6 +160,10 @@
     left: 235px;
   }
 
+  .colmn {
+    padding-left: 50px;
+  }
+
   .colmn1 {
     padding-left:100px;
   }
@@ -190,6 +194,7 @@
   .card {
     display:block;
     margin:0 auto;
-    width:330px;
+    width: 310px;
+    margin-left: 15px;
 }
 }
